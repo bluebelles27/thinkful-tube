@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('#search-button').click(function(){
     function search() {
     var q = $('#query').val();
-    });
+    };
 
     var request = gapi.client.youtube.search.list({
         key: "AIzaSyCZhJvq9XRp__3rvl0RrJdUFE3okUx6_sU",
