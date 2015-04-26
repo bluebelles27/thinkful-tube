@@ -1,5 +1,5 @@
 
-
+$(document).ready(function() {  
 
 gapi.client.load('youtube', 'v3', function() {
   var q = $('#query').val();
@@ -14,4 +14,5 @@ gapi.client.load('youtube', 'v3', function() {
      $('#search-container').html('<pre>' + str + '</pre>');
     console.log(str);
   });
+});
 });
