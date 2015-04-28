@@ -1,3 +1,7 @@
+function init() {
+  gapi.client.setApiKey('AIzaSyCZhJvq9XRp__3rvl0RrJdUFE3okUx6_sU');
+  gapi.client.load('urlshortener', 'v1').then(makeRequest);
+}
 
 $(document).ready(function() {
   $('#search-button').click(function search(){
@@ -5,7 +9,6 @@ $(document).ready(function() {
    });
 
    var request = gapi.client.youtube.search.list({
-       key: "AIzaSyCZhJvq9XRp__3rvl0RrJdUFE3okUx6_sU",
        q: q,
        part: 'snippet'
     });
