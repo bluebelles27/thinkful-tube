@@ -1,6 +1,6 @@
 function init() {
   gapi.client.setApiKey('AIzaSyCZhJvq9XRp__3rvl0RrJdUFE3okUx6_sU');
-  gapi.client.load('urlshortener', 'v1').then(makeRequest);
+  gapi.client.load('youtube', 'v3').then(makeRequest);
 }
 
 $(document).ready(function() {
