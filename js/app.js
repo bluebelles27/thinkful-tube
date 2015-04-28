@@ -17,7 +17,7 @@ $(document).ready(function() {
     request.execute(function(response) {
     	var str = JSON.stringify(response.result);
         $('#search-container').html('<pre>' + str + '</pre>');
-        console.log(str);
+        console.log(response.result);
     });
     });
 });
