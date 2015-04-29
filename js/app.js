@@ -19,8 +19,8 @@ $(document).ready(function() {
 			var html = "";
 			$.each(videos, function (index, items) {
 				console.log(videos);
-				html = html + "<li><p>" + items.snippet.title +
-					"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
+				html = html + "<li><p>" + response.result.items.snippet.title +
+					"</p><img src='" +  response.result.items.snippet.thumbnails.high.url + "'/></li>" ;
 			});
 		$("#search-container ul").html(html);
 		}
