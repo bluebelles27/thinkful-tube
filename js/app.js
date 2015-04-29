@@ -13,19 +13,17 @@ $(document).ready(function() {
 
     	request.execute(function(response) {
     		var str = JSON.stringify(response.result);
-    		console.log(str);
+    		//console.log(str);
         	console.log(response.result);
     	function displaySearchResults(videos) {
 			var html = "";
 			response.result.items.forEach(function(item){
 				var title = item.snippet.title;
-				var thumbnail = item.snippet.thumbnails.high.url
+				var thumbnail = item.snippet.thumbnails.high.url;
+				var vidID = item.id.videoId;
 				html = html + "<li><p>" + title +
-					"</p><img src='" +  thumbnail + "'/></li>" ;
+					"</p><a href='https://www.youtube.com/watch?v=" + vidID + "<img src='" +  thumbnail + "'/></a></li>" ;
 			});
-			//$.each(videos, function (index, items) {
-			//	console.log(videos);
-				
 			$("#search-container ul").html(html);
 		}
 		displaySearchResults(response.result);
