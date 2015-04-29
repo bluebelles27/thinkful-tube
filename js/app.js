@@ -22,9 +22,9 @@ $(document).ready(function() {
   	function displaySearchResults(videos) {
 		var html = "";
 		$.each(videos, function (index, video) {
-			console.log(video.snippet.thumbnails.medium.url);
-			html = html + "<li><p>" + video.snippet.title +
-				"</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
+			console.log(items.snippet.thumbnails.medium.url);
+			html = html + "<li><p>" + items.snippet.title +
+				"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
 		});
 		$("#search-container ul").html(html);
 	}
