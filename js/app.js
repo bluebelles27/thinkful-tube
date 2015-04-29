@@ -22,7 +22,7 @@ $(document).ready(function() {
   	function displaySearchResults(videos) {
 		var html = "";
 		$.each(videos, function (index, video) {
-			console.log(items.snippet.thumbnails.medium.url);
+			console.log(videos);
 			html = html + "<li><p>" + items.snippet.title +
 				"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
 		});
