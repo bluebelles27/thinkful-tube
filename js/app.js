@@ -18,9 +18,10 @@ $(document).ready(function() {
     	function displaySearchResults(videos) {
 			var html = "";
 			response.result.items.forEach(function(item){
-				var something = item.snippet.title;
-				html = html + "<li><p>" + response.result.items.snippet.title +
-					"</p><img src='" +  response.result.items.snippet.thumbnails.high.url + "'/></li>" ;
+				var title = item.snippet.title;
+				var thumbnail = items.snippet.thumbnails.high.url
+				html = html + "<li><p>" + title +
+					"</p><img src='" +  thumbnail + "'/></li>" ;
 			});
 			//$.each(videos, function (index, items) {
 			//	console.log(videos);
