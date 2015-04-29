@@ -15,18 +15,17 @@ $(document).ready(function() {
     		var str = JSON.stringify(response.result);
         	//$('#search-container').html('<pre>' + str + '</pre>');
         	console.log(response.result);
-    	});
-
     	function displaySearchResults(videos) {
-		var html = "";
-		$.each(videos, function (index, video) {
-			console.log(videos);
-			html = html + "<li><p>" + video.snippet.title +
-				"</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
-		});
+			var html = "";
+			$.each(videos, function (index, video) {
+				console.log(videos);
+				html = html + "<li><p>" + video.snippet.title +
+					"</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
+			});
 		$("#search-container ul").html(html);
 		}
-	displaySearchResults(response.result);
+		displaySearchResults(response.result);
+		});
     });
 });
 
