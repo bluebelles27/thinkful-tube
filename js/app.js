@@ -22,7 +22,7 @@ $(document).ready(function() {
 				var thumbnail = item.snippet.thumbnails.high.url;
 				var vidID = item.id.videoId;
 				html = html + "<li><p>" + title +
-					"</p><a href='https://www.youtube.com/watch" + vidID + "'><img src='" +  thumbnail + "'/></a></li>" ;
+					"</p><a href='https://www.youtube.com/watch?v=" + vidID + "'><img src='" +  thumbnail + "'/></a></li>" ;
 			});
 			$("#search-container ul").html(html);
 		}
