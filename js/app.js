@@ -17,11 +17,14 @@ $(document).ready(function() {
         	console.log(response.result);
     	function displaySearchResults(videos) {
 			var html = "";
-			$.each(videos, function (index, items) {
-				console.log(videos);
+			response.result.items.forEach(function(item){
+				var something = item.snippet.title;
 				html = html + "<li><p>" + response.result.items.snippet.title +
 					"</p><img src='" +  response.result.items.snippet.thumbnails.high.url + "'/></li>" ;
 			});
+			//$.each(videos, function (index, items) {
+			//	console.log(videos);
+				
 			$("#search-container ul").html(html);
 		}
 		displaySearchResults(response.result);
