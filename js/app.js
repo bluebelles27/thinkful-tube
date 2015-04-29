@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
   	function displaySearchResults(videos) {
 		var html = "";
-		$.each(videos, function (index, video) {
+		$.each(videos, function (index, items) {
 			console.log(videos);
 			html = html + "<li><p>" + items.snippet.title +
 				"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
