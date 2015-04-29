@@ -29,14 +29,14 @@ $(document).ready(function() {
 
     	function displaySearchResults(videos) {
 		var html = "";
-		$.each(videos, function (index, items) {
+		$.each(videos, function (index, video) {
 			console.log(videos);
-			html = html + "<li><p>" + items.snippet.title +
-				"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
+			html = html + "<li><p>" + video.snippet.title +
+				"</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
 		});
 		$("#search-container ul").html(html);
 		}
-	displaySearchResults(data.items);
+	displaySearchResults(items);
     });
 });
 
