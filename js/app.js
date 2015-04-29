@@ -16,9 +16,7 @@ function displaySearchResults(videos) {
 $(document).ready(function() {
   $('#search-button').click(function search(){
     var q = $('#query').val();
-   displaySearchResults(data.items);
-
-   	var request = gapi.client.youtube.search.list({
+	var request = gapi.client.youtube.search.list({
        	q: q,
        	part: 'snippet'
     	});
@@ -28,6 +26,17 @@ $(document).ready(function() {
         	//$('#search-container').html('<pre>' + str + '</pre>');
         	console.log(response.result);
     	});
+
+    	function displaySearchResults(videos) {
+		var html = "";
+		$.each(videos, function (index, items) {
+			console.log(videos);
+			html = html + "<li><p>" + items.snippet.title +
+				"</p><img src='" +  items.snippet.thumbnails.high.url + "'/></li>" ;
+		});
+		$("#search-container ul").html(html);
+		}
+	displaySearchResults(data.items);
     });
 });
 
