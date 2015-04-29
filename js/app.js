@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     	request.execute(function(response) {
     		var str = JSON.stringify(response.result);
-        	//$('#search-container').html('<pre>' + str + '</pre>');
+    		console.log(str);
         	console.log(response.result);
     	function displaySearchResults(videos) {
 			var html = "";
@@ -22,7 +22,7 @@ $(document).ready(function() {
 				html = html + "<li><p>" + response.result.items.snippet.title +
 					"</p><img src='" +  response.result.items.snippet.thumbnails.high.url + "'/></li>" ;
 			});
-		$("#search-container ul").html(html);
+			$("#search-container ul").html(html);
 		}
 		displaySearchResults(response.result);
 		});
