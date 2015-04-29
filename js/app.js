@@ -8,16 +8,29 @@ $(document).ready(function() {
     var q = $('#query').val();
    
 
-   var request = gapi.client.youtube.search.list({
-       q: q,
-       part: 'snippet'
-    });
-      //gapi.client.load('youtube', 'v3', function() {}
+   	var request = gapi.client.youtube.search.list({
+       	q: q,
+       	part: 'snippet'
+    	});
 
-    request.execute(function(response) {
-    	var str = JSON.stringify(response.result);
-        $('#search-container').html('<pre>' + str + '</pre>');
-        console.log(response.result);
+    	request.execute(function(response) {
+    		var str = JSON.stringify(response.result);
+        	//$('#search-container').html('<pre>' + str + '</pre>');
+        	console.log(response.result);
+    	});
     });
-    });
+  	function displaySearchResults(videos) {
+		var html = "";
+		$.each(videos, function (index, video) {
+			console.log(video.snippet.thumbnails.medium.url);
+			html = html + "<li><p>" + video.snippet.title +
+				"</p><img src='" +  video.snippet.thumbnails.high.url + "'/></li>" ;
+		});
+		$("#search-container ul").html(html);
+	}
+
 });
+
+//Loop through items
+//response.result.items.snippet.thumbnails.default.url
+//video id in items.id
