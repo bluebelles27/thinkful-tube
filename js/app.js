@@ -19,7 +19,7 @@ $(document).ready(function() {
 			var html = "";
 			response.result.items.forEach(function(item){
 				var title = item.snippet.title;
-				var thumbnail = items.snippet.thumbnails.high.url
+				var thumbnail = item.snippet.thumbnails.high.url
 				html = html + "<li><p>" + title +
 					"</p><img src='" +  thumbnail + "'/></li>" ;
 			});
