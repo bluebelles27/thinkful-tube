@@ -79,7 +79,7 @@ body {
 	border: 1px solid #000;
 }
 
-#buttons {
+.buttons {
 	text-align: center;
 	padding-bottom: 2em;
 	padding-top: 2em;
