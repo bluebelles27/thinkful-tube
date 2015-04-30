@@ -86,14 +86,18 @@ body {
 	max-width: 900px;
 }
 
+label {
+	display: block;
+	padding: .5em;
+}
+
 #query{
 	display: block;
 	border: 1px solid #000;
 	width: 100%;
+	box-sizing: border-box;
 	font-size: 1.5em;
-	margin-bottom: 1em;
-	margin-left: .5em;
-	margin-right: .5em;
+	margin: 0;
 }
 
 #search-button {
