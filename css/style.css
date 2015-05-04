@@ -115,6 +115,13 @@ label {
 	margin: 0 auto;
 }
 
+#search-container ul{
+	overflow: hidden;
+	margin-top: 1em;
+	list-style: none;
+	box-sizing: inherit;
+}
+
 #search-container li {
 	margin-bottom: 2em;
 	padding: 1em;
