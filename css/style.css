@@ -121,7 +121,7 @@ label {
 	border: 1px solid #000;
 }
 
-#search-results li p {
+#search-container li p {
 	padding-bottom: 1em;
 	margin-bottom: 1em;
 	border-bottom: 1px solid #ccc;
