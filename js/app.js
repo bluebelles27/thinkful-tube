@@ -5,6 +5,7 @@ function init() {
 
 $(document).ready(function() {
   $('#search-button').click(function search(){
+  	event.preventDefault();
     var q = $('#query').val();
 	var request = gapi.client.youtube.search.list({
        	q: q,
