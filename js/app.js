@@ -29,6 +29,7 @@ $(document).ready(function() {
 		}
 		displaySearchResults(response.result);
 		});
+		return false;
     });
 });
 
