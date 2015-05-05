@@ -4,7 +4,7 @@ function init() {
 }
 
 $(document).ready(function() {
-  $('#search-form').submit(function search(){
+  $('#search-form').submit(function search(event){
   	event.preventDefault();
     var q = $('#query').val();
 	var request = gapi.client.youtube.search.list({
